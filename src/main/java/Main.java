@@ -1,8 +1,17 @@
+
 public class Main {
     public static void main(String[] args) {
-        int ticketPrice = 10_000;
-        int rublesPerBonus = 20;
-        int bonus = ticketPrice / rublesPerBonus;
-        System.out.println("Начислено бонусов: " + bonus);
+        int balance = 100;
+        int payment = 1100;
+        int bonus = 0;
+
+        if (payment > 1000) {
+            bonus = payment / 100;
+        }
+
+        int totalBalance = balance + payment + bonus;
+
+        System.out.println("Бонусные рубли: " + bonus);
+        System.out.println("Итоговый счёт: " + totalBalance);
     }
 }
